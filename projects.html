@@ -14,29 +14,37 @@
         <nav>
             <ul>
                 <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
                 <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="publications.html"><i class="fas fa-book"></i> Publications</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
                 <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h1>Digital Methods Projects</h1>
-        <div class="project-list">
-            <div class="project-item">
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search projects...">
+            <select id="sortSelect">
+                <option value="newest">Sort by Date: Newest</option>
+                <option value="oldest">Sort by Date: Oldest</option>
+            </select>
+        </div>
+        <div class="project-list" id="projectList">
+            <div class="project-item" data-date="2023-05-01" data-keywords="first project methods">
                 <h2>Project Title 1</h2>
                 <p>This is a brief description of the first project. It involves ...</p>
-                <a href="project-details-1.html" class="project-link">Read More</a>
+                <a href="#" class="project-link" onclick="openModal('Project Title 1', 'This is a detailed description of the first project. It involves extensive research and analysis of digital methods used in various scenarios. The project aims to enhance understanding and implementation of these methods.', '2023-05-01', 'first project, methods, research')">Read More</a>
             </div>
-            <div class="project-item">
+            <div class="project-item" data-date="2022-08-15" data-keywords="second project focus">
                 <h2>Project Title 2</h2>
                 <p>This is a brief description of the second project. It focuses on ...</p>
-                <a href="project-details-2.html" class="project-link">Read More</a>
+                <a href="#" class="project-link" onclick="openModal('Project Title 2', 'This is a detailed description of the second project. It focuses on various methods and techniques used in the research process.', '2022-08-15', 'second project, focus')">Read More</a>
             </div>
-            <div class="project-item">
+            <div class="project-item" data-date="2021-11-20" data-keywords="third project goal">
                 <h2>Project Title 3</h2>
                 <p>This is a brief description of the third project. The goal is ...</p>
-                <a href="project-details-3.html" class="project-link">Read More</a>
+                <a href="#" class="project-link" onclick="openModal('Project Title 3', 'This is a detailed description of the third project. The goal is to achieve significant improvements in the methodology.', '2021-11-20', 'third project, goal')">Read More</a>
             </div>
             <!-- Add more project items as needed -->
         </div>
@@ -44,6 +52,18 @@
     <footer>
         <p>&copy; 2024 My Website. All rights reserved.</p>
     </footer>
+
+    <!-- Modal structure -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-date"></p>
+            <p id="modal-description"></p>
+            <p id="modal-keywords"></p>
+        </div>
+    </div>
+    
     <script src="js/script.js"></script>
 </body>
 </html>

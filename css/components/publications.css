@@ -1,0 +1,42 @@
+/* Main content styles */
+main {
+    padding: 2em;
+    max-width: 1200px;
+    margin: 2em auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+section h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.3em;
+}
+
+.publication-item {
+    margin: 0.5em 0;
+    font-size: 1.1em;
+    color: #555;
+    padding: 0.5em;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.publication-item:hover {
+    background-color: #e9e9e9;
+}
